@@ -11,6 +11,7 @@ public class CoinCombinations {
       String result = "";
       Integer quarters = 0;
       Integer dimes = 0;
+      Integer nickels = 0;
       while (numberInput > 0) {
         if (numberInput >= 25) {
           numberInput -= 25;
@@ -18,6 +19,9 @@ public class CoinCombinations {
         } else if (numberInput >= 10){
           numberInput -= 10;
           dimes++;
+        }else if (numberInput >= 5) {
+          numberInput -= 5;
+          nickels++;
         }
       }
       if (quarters > 0) {
@@ -25,6 +29,9 @@ public class CoinCombinations {
       }
       if (dimes > 0) {
         result = result + " " + dimes + " dime";
+      }
+      if (nickels > 0) {
+        result = result + " " + nickels + " nickel";
       }
 
 
