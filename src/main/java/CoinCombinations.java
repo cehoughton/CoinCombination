@@ -12,6 +12,7 @@ public class CoinCombinations {
       Integer quarters = 0;
       Integer dimes = 0;
       Integer nickels = 0;
+      Integer penny = 0;
       while (numberInput > 0) {
         if (numberInput >= 25) {
           numberInput -= 25;
@@ -22,7 +23,14 @@ public class CoinCombinations {
         }else if (numberInput >= 5) {
           numberInput -= 5;
           nickels++;
+        } else if(numberInput >= 1) {
+          numberInput -= 1;
+          penny++;
         }
+
+
+
+
       }
       if (quarters > 0) {
         result = quarters + " quarter";
@@ -32,6 +40,9 @@ public class CoinCombinations {
       }
       if (nickels > 0) {
         result = result + " " + nickels + " nickel";
+      }
+      if (penny > 0) {
+        result = result + " " + penny + " penny";
       }
 
 

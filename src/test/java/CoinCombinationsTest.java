@@ -21,6 +21,11 @@ public class CoinCombinationsTest {
     CoinCombinations coinCombinations = new CoinCombinations();
     assertEquals("1 quarter 1 dime 1 nickel", coinCombinations.giveChange(40));
   }
+  @Test
+  public void coinCombinations_Enter44_Return1Quarter_1Dime_1Nickel_1Penny() {
+    CoinCombinations coinCombinations = new CoinCombinations();
+    assertEquals("1 quarter 1 dime 1 nickel 4 penny", coinCombinations.giveChange(44));
+  }
 }
 
  /*rock Scissors true
