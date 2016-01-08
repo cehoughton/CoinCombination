@@ -17,7 +17,7 @@ public class AppTest extends FluentTest {
   @Test
     public void rootTest() {
         goTo("http://localhost:4567/");
-        assertThat(pageSource()).contains("Do you need");
+        assertThat(pageSource()).contains("Do you need a change?");
     }
 
   @Test
@@ -25,6 +25,6 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567");
     fill("#sender").with("47");
     submit(".btn");
-    assertThat(pageSource()).contains("sdfjhsdjkfjs");
+    assertThat(pageSource()).contains("1 quarter 2 dime 2 penny");
   }
 }
